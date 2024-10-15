@@ -1,0 +1,21 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: #003049;
+}
+
+.Header h3 {
+    color: #FDF0D5;
+    white-space: nowrap;
+}
+
+.Header h3 {
+    margin: 1em;
+}
+
+.div-navbar {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
