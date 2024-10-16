@@ -44,6 +44,7 @@ function FakeMessage() {
     };
 
     const handleClick = async () => {
+        setMessage("");
         const url = process.env.REACT_APP_API_URL + "predict";
         setDisableMessageInout(true);
         let toxicReasons = [];
@@ -81,7 +82,6 @@ function FakeMessage() {
             body: message,
         }
         setMessages([...messages, newMessage]);
-        setMessage("");
     };
 
     return (
