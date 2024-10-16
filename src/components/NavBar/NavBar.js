@@ -1,17 +1,7 @@
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-    MenuItemOption,
-    MenuGroup,
-    MenuOptionGroup,
-    MenuDivider,
-} from '@chakra-ui/react'
-import { HamburgerIcon, AddIcon, ExternalLinkIcon, RepeatIcon, EditIcon, IconButton } from '@chakra-ui/icons'
 import { Link as ReactRouterLink } from 'react-router-dom';
-import { Link as ChakraLink, LinkProps } from '@chakra-ui/react';
+import { Link as ChakraLink } from '@chakra-ui/react';
 import './NavBar.css';
+
 function NavBar() {
     return (
         <div className="NavBar">
