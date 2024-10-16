@@ -1,4 +1,4 @@
-.NavBar {
+.NavBarSensibilisation {
     display: flex;
     justify-content: start;
     gap: 4em;
@@ -7,6 +7,6 @@
     background-color: #003049;
 }
 
-.NavBar a {
-    color:#FDF0D5;
+.NavBarSensibilisation a {
+    color:white;
 }

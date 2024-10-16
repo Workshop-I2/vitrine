@@ -15,7 +15,6 @@ function TextArea(props) {
                 disabled={props.disabled}
                 value={props.value}
                 onChange={handleInputChange}
-                placeholder='Entrez un message à tester'
                 size='sm'
             />
         </div>

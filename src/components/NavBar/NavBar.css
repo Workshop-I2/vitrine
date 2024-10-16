@@ -10,3 +10,8 @@
 .NavBar a {
     color:white;
 }
+
+.active-route {
+    color:#C1121F !important;
+    text-decoration: underline !important;
+}
