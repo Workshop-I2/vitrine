@@ -1,0 +1,50 @@
+.Contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-content {
+    margin-top: 3em;
+    display: flex;
+    width: 100%;
+    gap: 1em;
+}
+
+.Contact .formulaire {
+    width: 50%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.Contact .info-contact {
+    width: 50%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.Contact .sep {
+    border-right: 1px black solid;
+}
+
+.Contact .button {
+    text-align: end;
+}
+
+.info-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.info-contact-item svg {
+    width: 30px;
+    height: 30px;
+}

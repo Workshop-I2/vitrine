@@ -9,7 +9,7 @@ function TextArea(props) {
     }
 
     return (
-        <>
+        <div>
             <Text mb='8px'>{props.label} :</Text>
             <Textarea
                 disabled={props.disabled}
@@ -18,7 +18,7 @@ function TextArea(props) {
                 placeholder='Entrez un message à tester'
                 size='sm'
             />
-        </>
+        </div>
     )
 }
 
