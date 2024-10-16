@@ -12,6 +12,9 @@ import {
 import App from './App';
 import FakeMessage from './pages/FakeMessage/FakeMessage';
 import Sensibilisation from './pages/Sensibilisation/Sensibilisation';
+import Racisme from './pages/Racisme/Racisme';
+import Sexisme from './pages/Sexisme/Sexisme';
+import CyberHarcelement from './pages/CyberHarcelement/CyberHarcelement';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +28,20 @@ const router = createBrowserRouter([
       {
         path: "/sensibilisation",
         element: <Sensibilisation />,
+        children: [
+          {
+            path: "/sensibilisation/racisme",
+            element: <Racisme/>,
+          },
+          {
+            path: "/sensibilisation/sexisme",
+            element: <Sexisme/>,
+          },
+          {
+            path: "/sensibilisation/cyberharcelement",
+            element: <CyberHarcelement/>,
+          }
+        ]
       },
       {
         path: "/fake-message",
