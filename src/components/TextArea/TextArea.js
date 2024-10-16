@@ -1,19 +1,19 @@
 import { Textarea, Text } from "@chakra-ui/react";
 import React from "react";
+import './TextArea.css';
 
 function TextArea(props) {
-    let [value, setValue] = React.useState('')
-
     let handleInputChange = (e) => {
         let inputValue = e.target.value
-        setValue(inputValue)
+        props.onInputChange(inputValue)
     }
 
     return (
         <>
             <Text mb='8px'>{props.label} :</Text>
             <Textarea
-                value={value}
+                disabled={props.disabled}
+                value={props.value}
                 onChange={handleInputChange}
                 placeholder='Entrez un message à tester'
                 size='sm'

@@ -9,3 +9,27 @@
 .TextArea {
     width: 60%;
 }
+
+.message {
+    border: 1px solid #669BBC;
+    padding:10px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    align-items: end;
+    border-radius: 10px;
+}
+
+.item-message-datetime {
+    text-align: end;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.item-message-body {
+    background-color: #669BBC;
+    padding:0.5em;
+    border-radius: 0.5em;
+    color:white;
+}
