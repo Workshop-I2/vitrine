@@ -1,7 +1,11 @@
+import { Outlet } from "react-router-dom";
+import MenuSensibilisation from "../../components/MenuSensibilisation/MenuSensibilisation";
+
 function Sensibilisation() {
     return (
         <div className="Sensibilisation">
-            <div>Sensibilisation</div>
+            <MenuSensibilisation/>
+            <Outlet/>
         </div>
     );
 }
