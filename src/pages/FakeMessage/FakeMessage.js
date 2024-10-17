@@ -54,7 +54,7 @@ function FakeMessage() {
     const handleClick = async () => {
 
         setMessage("");
-        const url = process.env.REACT_APP_API_URL + "predict";
+        const url = process.env.REACT_APP_API_URL + "analyse";
         setDisableMessageInout(true);
         let toxicReasons = [];
         let ip = ""
