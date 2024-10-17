@@ -4,6 +4,14 @@ import Submit from '../../components/Submit/Submit';
 import { useState } from 'react';
 import { useToast } from '@chakra-ui/react';
 import HeadingTitle from '../../components/HeadingTitle/HeadingTitle';
+import axios from 'axios';
+
+
+const MAC_ADDRESS = [
+    '00:1B:44:11:3A:B7',
+    '5E:FF:56:A2:AF:15',
+    '00:37:6C:E2:EB:62',
+]
 
 function FakeMessage() {
     const [messages, setMessages] = useState([]);
@@ -44,14 +52,18 @@ function FakeMessage() {
     };
 
     const handleClick = async () => {
+
         setMessage("");
         const url = process.env.REACT_APP_API_URL + "predict";
         setDisableMessageInout(true);
         let toxicReasons = [];
-
+        let ip = ""
         try {
             const headers = new Headers();
             headers.append("Content-Type", "application/json");
+
+            const res = await axios.get("https://api.ipify.org/?format=json");
+            ip = res.data.ip;
 
             const response = await fetch(url, {
                 method: "POST",
@@ -80,6 +92,8 @@ function FakeMessage() {
         const newMessage = {
             datetime: new Date(),
             body: message,
+            ip:ip,
+            address_mac: MAC_ADDRESS[(Math.floor(Math.random() * MAC_ADDRESS.length))]
         }
         setMessages([...messages, newMessage]);
     };
