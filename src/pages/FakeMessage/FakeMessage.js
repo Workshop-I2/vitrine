@@ -21,10 +21,10 @@ function FakeMessage() {
     const toast = useToast();
 
     const toxicityReasonLabels = {
-        toxic: 'toxic',
-        obscene: 'obscene',
-        insult: 'insult',
-        identity_hate: 'identity_hate',
+        toxic: 'toxicité',
+        obscene: 'contenu sexuel',
+        insult: 'insultes',
+        identity_hate: 'racisme',
     }
 
     function toastError(errorMessage) {
@@ -67,7 +67,13 @@ function FakeMessage() {
 
             const response = await fetch(url, {
                 method: "POST",
-                body: JSON.stringify({ comment: message }),
+                body: JSON.stringify(
+                    {
+                        comment: message,
+                        ip: ip,
+                        mac_address: MAC_ADDRESS[(Math.floor(Math.random() * MAC_ADDRESS.length))],
+                        phone_number: '0610101010',
+                    }),
                 headers: headers,
             });
 
@@ -92,8 +98,6 @@ function FakeMessage() {
         const newMessage = {
             datetime: new Date(),
             body: message,
-            ip:ip,
-            address_mac: MAC_ADDRESS[(Math.floor(Math.random() * MAC_ADDRESS.length))]
         }
         setMessages([...messages, newMessage]);
     };
